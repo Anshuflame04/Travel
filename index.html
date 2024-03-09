@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="brand">Travel <h6></h6></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide active" src="1.mp4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="2.mp4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="3.mp4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="4.mp4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="5.mp4.mp4" autoplay muted loop></video>
+
+        <div class="content active">
+            <h1>Wonderful...<br><span>Island</span></h1>
+            <p>Visiting an island is a delightful escape, blending tranquility with excitement. The stunning beaches, lush foliage, and rhythmic ocean waves create a perfect backdrop for relaxation. Whether lounging on a secluded beach or exploring the vibrant underwater world, the island atmosphere radiates joy. Local culture and cuisine add a flavorful touch to the experience, enhancing the overall enjoyment. From sunset strolls to discovering hidden coves, every moment on an island becomes a cherished memory, creating a lasting sense of happiness and fulfillment.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Camping...<br><span>Enjoy</span></h1>
+            <p>Camping is a timeless adventure that reconnects us with nature and simplicity. Setting up a tent beneath the open sky, surrounded by the sounds of rustling leaves and crackling campfires, creates a unique sense of serenity. Whether nestled in the mountains, by a tranquil lake, or deep within a forest, camping offers a chance to escape the hustle and bustle of everyday life. It's a time to trade screens for starlit skies, exchanging the conveniences of modern living for the thrill of cooking over an open flame and sharing stories under a canopy of trees. The essence of camping lies in the joy of waking up to the crisp morning air, the scent of pine, and the promise of new adventures just beyond the tent flap.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Adevntures...<br><span>Off Road</span></h1>
+            <p>Adventures breathe life into our existence, injecting a thrilling dose of excitement and unpredictability. Whether embarking on a daring journey into the wilderness, navigating uncharted territories, or simply embracing the unknown in everyday life, the essence of adventure lies in the spirit of exploration. It's about stepping out of our comfort zones, facing challenges head-on, and discovering the extraordinary in the ordinary. Adventures fuel personal growth, fostering resilience and adaptability as we navigate the twists and turns of the unknown. In these moments, we find not only the thrill of the journey but also the profound lessons that come with embracing the adventure of life itself.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Road Trip...<br><span>Together</span></h1>
+            <p>Embarking on a road trip is like setting out on a journey of freedom and discovery. The open road stretches ahead, promising adventure with every curve and bend. The hum of the engine and the wind rushing through open windows create a soundtrack to the scenic landscapes that unfold along the way. There's a unique joy in navigating diverse terrains, from winding mountain roads to expansive desert highways. Stops at roadside attractions and quaint towns add spontaneity and charm to the journey. It's a time to share stories, sing along to favorite tunes, and savor the simple pleasure of the road unfolding beneath the wheels. A road trip is more than a means of travel; it's a soulful exploration of the world around us, leaving indelible memories etched in the asphalt of the open highway.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>feel Nature...<br><span>Relax</span></h1>
+            <p>Feeling nature is an exquisite embrace of the senses, a sensory symphony that unfolds with each breath. The rustle of leaves, the gentle caress of a breeze, and the earthy fragrance of soil evoke a profound connection to the natural world. As sunlight filters through the leaves or raindrops dance on foliage, there's an undeniable sense of being part of something vast and harmonious. Observing the intricate patterns of a butterfly's flight or the rhythmic sway of grass in the wind deepens the appreciation for the beauty and balance inherent in nature. It's a rejuvenating experience that transcends the ordinary, allowing us to pause, breathe, and truly feel the pulse of the world around us.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <!-- <script type="text/javascript">
+        // js of responsive nav menu
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () =>{
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        // js for video slider navigation
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script> -->
+
+</body>
+</html>
+
